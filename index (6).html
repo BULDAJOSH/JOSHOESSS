@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shoe Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      color: white;
+    }
+
+    section {
+      display: none;
+      padding: 60px 0;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    .hero {
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+      border-radius: 20px;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      background: white;
+      color: black;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: contain;
+      background: #f8f8f8;
+      padding: 10px;
+    }
+
+    .price {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    .navbar {
+      background: rgba(0,0,0,0.8) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-btn {
+      border-radius: 20px;
+      padding: 6px 18px;
+      transition: 0.3s;
+    }
+
+    .nav-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .container-box {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#" onclick="showPage('home')">ShoeStore</a>
+
+    <div class="ms-auto">
+      <button class="btn btn-outline-light nav-btn me-2" onclick="showPage('home')">Home</button>
+      <button class="btn btn-outline-light nav-btn me-2" onclick="showPage('collection')">Collection</button>
+      <button class="btn btn-outline-light nav-btn" onclick="showPage('contact')">Contact</button>
+    </div>
+  </div>
+</nav>
+
+
+<section id="home" class="active">
+  <div class="container container-box">
+
+    <div class="hero text-center">
+      <h1 class="display-3 fw-bold">JOSHOES</h1>
+      <p class="lead mt-3">
+        Step into comfort. Step into style. Premium sneakers made for everyday confidence.
+      </p><br>
+      <p>Owned By: Josh Winlance D. Bulda</p>
+
+      <div class="mt-4">
+        <button class="btn btn-light btn-lg me-2" onclick="showPage('collection')">
+          Shop Collection
+        </button>
+        <button class="btn btn-outline-light btn-lg" onclick="showPage('contact')">
+          Contact Us
+        </button>
+      </div>
+    </div>
+
+    <div class="row text-center mt-5 g-4">
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h4>Premium Quality</h4>
+          <p class="mt-2">Carefully selected sneakers built for comfort, durability, and style.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h4>Fast Service</h4>
+          <p class="mt-2">Quick response and smooth browsing experience for all customers.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card p-4 h-100">
+          <h4>Street Style</h4>
+          <p class="mt-2">Designed for modern streetwear fashion and everyday wear.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5 p-4"
+         style="background: rgba(255,255,255,0.08); border-radius: 20px;">
+      <h3 class="fw-bold">New Drop Every Week</h3>
+      <p class="mb-0">Stay updated with the latest sneaker releases and exclusive deals.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="collection">
+  <div class="container container-box">
+    <h2 class="text-center mb-4">Shoe Collection</h2>
+
+    <div class="row g-4">
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5oOuqNrK-UCLuVqYVbMfh_8EqdTA-4beaHMTppj5AOBCZEuLOFEeyCio&s">
+          <div class="card-body text-center">
+            <h5>Nike Vomero 5</h5>
+            <p class="price">$160</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_500,h_500/global/396466/01/sv01/fnd/PHL/fmt/png/PUMA-Speedcat-OG-Sneakers">
+          <div class="card-body text-center">  
+            <h5>Puma Suede</h5>
+            <p class="price">$120</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGV3rZzGisFJnQoX0LzFz298DAE0Lwps7BbQ&s">
+          <div class="card-body text-center">
+            <h5>Adidas Samba OG</h5>
+            <p class="price">$110</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="container container-box">
+    <h2 class="text-center mb-4">Contact Us</h2>
+
+    <form class="col-md-6 mx-auto">
+      <input class="form-control mb-3" placeholder="Name">
+      <input class="form-control mb-3" placeholder="Email">
+      <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
+      <button class="btn btn-light w-100">Send Message</button>
+    </form>
+    <br>
+    <br>
+    <p>Stay Tune for our next drop</p><br>
+    <P>Gmail: joshwinlance.jwb@gmail.com</P><br>
+    <p>Owned By: Josh Winlance D. Bulda</p>
+  </div>
+</section>
+
+<script>
+  function showPage(page) {
+    document.querySelectorAll("section").forEach(sec => {
+      sec.classList.remove("active");
+    });
+    document.getElementById(page).classList.add("active");
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
